@@ -1,0 +1,71 @@
+{
+  "name": "Member",
+  "type": "object",
+  "properties": {
+    "first_name": {
+      "type": "string",
+      "description": "Member's first name"
+    },
+    "last_name": {
+      "type": "string",
+      "description": "Member's last name"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "Member's email address"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Member's phone number"
+    },
+    "address": {
+      "type": "string",
+      "description": "Member's address"
+    },
+    "city": {
+      "type": "string",
+      "description": "City"
+    },
+    "state": {
+      "type": "string",
+      "description": "State"
+    },
+    "zip_code": {
+      "type": "string",
+      "description": "ZIP code"
+    },
+    "volunteer_interests": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "Phone Banking",
+          "Door Knocking",
+          "Event Planning",
+          "Social Media",
+          "Fundraising",
+          "Research",
+          "Other"
+        ]
+      },
+      "description": "Areas where member wants to volunteer"
+    },
+    "membership_type": {
+      "type": "string",
+      "enum": [
+        "Basic",
+        "Active",
+        "Supporter",
+        "Leadership"
+      ],
+      "default": "Basic",
+      "description": "Type of membership"
+    }
+  },
+  "required": [
+    "first_name",
+    "last_name",
+    "email"
+  ]
+}
