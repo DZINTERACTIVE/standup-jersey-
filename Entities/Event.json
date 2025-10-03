@@ -1,0 +1,66 @@
+{
+  "name": "Event",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Event name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Event description"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Event date"
+    },
+    "time": {
+      "type": "string",
+      "description": "Event time"
+    },
+    "location": {
+      "type": "string",
+      "description": "Event location/address"
+    },
+    "latitude": {
+      "type": "number",
+      "description": "Latitude coordinate"
+    },
+    "longitude": {
+      "type": "number",
+      "description": "Longitude coordinate"
+    },
+    "event_type": {
+      "type": "string",
+      "enum": [
+        "Rally",
+        "Town Hall",
+        "Meeting",
+        "Fundraiser",
+        "Volunteer",
+        "Other"
+      ],
+      "description": "Type of event"
+    },
+    "registration_required": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether registration is required"
+    },
+    "max_attendees": {
+      "type": "number",
+      "description": "Maximum number of attendees"
+    },
+    "contact_info": {
+      "type": "string",
+      "description": "Contact information for the event"
+    }
+  },
+  "required": [
+    "title",
+    "description",
+    "date",
+    "location"
+  ]
+}
