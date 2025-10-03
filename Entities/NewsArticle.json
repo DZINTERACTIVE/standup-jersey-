@@ -1,0 +1,47 @@
+{
+  "name": "NewsArticle",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Article headline"
+    },
+    "excerpt": {
+      "type": "string",
+      "description": "Brief summary of the article"
+    },
+    "content": {
+      "type": "string",
+      "description": "Full article content"
+    },
+    "author": {
+      "type": "string",
+      "description": "Article author name"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Breaking News",
+        "Politics",
+        "Local Action",
+        "Opinion",
+        "Policy"
+      ],
+      "description": "Article category"
+    },
+    "featured_image": {
+      "type": "string",
+      "description": "URL to featured image"
+    },
+    "published": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether article is published"
+    }
+  },
+  "required": [
+    "title",
+    "content",
+    "author"
+  ]
+}
