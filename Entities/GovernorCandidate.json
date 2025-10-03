@@ -1,0 +1,65 @@
+{
+  "name": "GovernorCandidate",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Candidate's full name"
+    },
+    "party": {
+      "type": "string",
+      "enum": [
+        "Republican",
+        "Democrat",
+        "Independent"
+      ],
+      "description": "Political party"
+    },
+    "position": {
+      "type": "string",
+      "description": "Current position/title"
+    },
+    "bio": {
+      "type": "string",
+      "description": "Brief biography"
+    },
+    "key_issues": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Key campaign issues"
+    },
+    "photo_url": {
+      "type": "string",
+      "description": "URL to candidate photo"
+    },
+    "website": {
+      "type": "string",
+      "description": "Campaign website"
+    },
+    "endorsed": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether endorsed by Stand Up"
+    },
+    "election_year": {
+      "type": "number",
+      "description": "Year of election"
+    },
+    "polling_percentage": {
+      "type": "number",
+      "description": "Current polling percentage"
+    },
+    "polling_trend": {
+      "type": "string",
+      "description": "Polling trend description"
+    }
+  },
+  "required": [
+    "name",
+    "party",
+    "bio",
+    "election_year"
+  ]
+}
